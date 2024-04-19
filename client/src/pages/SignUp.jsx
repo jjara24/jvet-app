@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { Link, userNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function SignUp() {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-  const navigate = userNavigate();
+  const navigate = useNavigate();
   const handlerChange = (e) => {  
       setFormData({ ...formData, [e.target.id]: e.target.value });
   }
